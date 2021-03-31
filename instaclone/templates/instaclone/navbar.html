@@ -1,0 +1,89 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="https://cwpwp2.betterthanpaper.com/wp-content/uploads/2020/05/instagram-1.jpg" width="100" height="160">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">
+                <span class="material-icons">
+                    home
+                    </span> Home
+            </a>
+
+            <a class="navbar-item">
+                <span class="material-icons">
+                    explore
+                    </span> Explore
+            </a>
+
+            <a class="navbar-item">
+                <span class="material-icons">
+                    circle_notifications
+                    </span> Notifications
+            </a>
+
+            <a class="navbar-item">
+                <span class="material-icons">
+                    all_inbox
+                    </span> Inbox
+            </a>
+            <a class="navbar-item" href="{% url 'profile' user.username %}">
+                <span class="material-icons">
+                    portrait
+                    </span> profile
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    <span class="material-icons">
+                        settings
+                        </span> settings
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+              change password
+            </a>
+                    <a class="navbar-item">
+              contact
+            </a>
+                    <a class="navbar-item">
+              report issue
+            </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+              logout
+            </a>
+                </div>
+            </div>
+        </div>
+        <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}">
+            <input name="search_user" autocomplete="off" id="searching" class="form-control d-none d-md-block" placeholder="Search User">
+        </form>
+
+
+
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" href="registration/signup.html">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light" href="registration/login.html">
+              Log in
+            </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
