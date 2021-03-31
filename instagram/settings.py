@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'instaclone',
-    'bootstrap3',
+    'bootstrap4',
     'crispy_forms'
 ]
 

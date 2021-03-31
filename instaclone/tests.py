@@ -22,7 +22,7 @@ class TestProfile(TestCase):
 
 class TestPost(TestCase):
     def setUp(self):
-        self.profile_test = Profile(name='default', user=User(username='default-007'))
+        self.profile_test = Profile(name='default', user=User(username='moonguy'))
         self.profile_test.save()
 
         self.image_test = Post(image='default.png', name='test', caption='default test', user=self.profile_test)
@@ -42,7 +42,7 @@ class TestPost(TestCase):
 
 class TestComment(TestCase):
     def setUp(self):
-        self.comment = Profile(name='default', user=User(username='default-007'))
+        self.comment = Profile(name='default', user=User(username='moonguy'))
         self.comment.save()
 
     #Test Instance
