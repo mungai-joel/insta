@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,get_object_or_404
-from django.http import HttpResponseBadRequest, JsonResponse
+from django.http import HttpResponseBadRequest, JsonResponse , HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm, UpdateUserForm, UpdateUserProfileForm, PostForm, CommentForm
 from django.contrib.auth import login, authenticate
@@ -36,7 +36,7 @@ def index(request):
             post = form.save(commit=False)
             post.user = request.user.profile
             post.save()
-            return redirect('index')
+            return HttpResponseRedirect(request.path_info)
     else:
         form = PostForm()
     params = {
